@@ -1,0 +1,52 @@
+#header ul {
+	margin-top: -15px;
+}
+
+#header li {
+	list-style-type: none;
+	display: inline;
+	padding: 20px 26px 15px 26px;
+	margin-right: 14px;
+	float: right;
+}
+
+#logo {
+	margin-bottom: 50px;
+	margin-top: 20px;
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+#header a {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 36px;
+	color: white;
+	font-family: ‘Metrophobic’, Arial, serif; 
+	font-weight: 400;
+}
+
+#header a:visited, a:active {
+	color: white;
+}
+
+#header {
+	margin-top: 50px;
+	float: left;
+	width: 100%;
+}
+
+.contact {
+	color: white;
+	margin-left: 80px;
+	font-size: 24pt;
+	margin-top: -90px;
+}
+
+body {
+	background-image: url("pics/winesunset.jpg");
+	background-repeat: no-repeat;;
+	background-size: 1700px;
+	background-position: center;
+}

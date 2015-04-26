@@ -1,0 +1,59 @@
+#header ul {
+	margin-top: -15px;
+}
+
+#header li {
+	list-style-type: none;
+	display: inline;
+	padding: 20px 26px 15px 26px;
+	margin-right: 14px;
+	float: right;
+}
+#logo {
+	margin-bottom: 50px;
+	margin-top: -20px;
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+#header a {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 36px;
+	color: black;
+	font-family: ‘Metrophobic’, Arial, serif; 
+	font-weight: 400;
+	color: grey;
+}
+
+#header a:visited, a:active {
+	color: grey;
+}
+
+#header {
+	margin-top: 50px;
+	float: left;
+	width: 100%;
+}
+
+.wineO {
+	float: left;
+	margin-top: -130px;
+	float: right;
+	padding-right: 100px;
+	color: grey;
+	font-size: 18pt;
+}
+
+.award {
+	margin-top: 380px;
+	float: right;
+	color: white;
+	margin-bottom: 20px;
+}
+
+body {
+	background-image: url("pics/winecastle.jpg");
+	background-repeat: no-repeat;;
+}
