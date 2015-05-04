@@ -2,8 +2,20 @@
 <head>
 	<title>Wine-O's-Vinyard</title>
 		<link rel="stylesheet" type="text/css" href="retailer.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>
+
 </head>
 <body>
+	<div class="lightbox">
+		
+		<div class="overlay">
+			<a class="close">Close</a>
+		</div>
+		<img class="enlarged-image" src="">
+	</div>
+
 	<div id="header">
 		<div id ="logo"> 
 			<a href="index.html"> <img src="#" alt= "Go to Home Page!">
@@ -29,35 +41,53 @@
 	</div>
 <div class="discover">So you want to try the best thing since spray butter?</div>
 
-<div class="stores">
-	<nav>
-		<ul> 
-			<li>
-				<p>
-					Martie's Malbec
-				</p>
-				<p>
-					Rated 89 points--	Whyne Enthusiast</p>
-				<a href="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg" target="_blank"> 
-					BUY
-				</a>
-			</li>
-			<li>
-				<p>Ralf's Riesling</p>
-				<p>Not yet rated--TBD</p>
-				<a href="https://s-media-cache-ak0.pinimg.com/736x/71/b9/0b/71b90b09848895a4f20a31ff4c89d6ae.jpg" target="_blank"> 
-					BUY
-				</a>
-			</li>
-			<li>
-				<p>Carlo's Cabernet</p>
-				<p>Rating n/a--What Rating</p>
-				<a href="https://s-media-cache-ak0.pinimg.com/736x/90/8b/51/908b51ac084aba76a2c908eff853315d.jpg" target="_blank"> 
-					BUY
-				</a>
-			</li>
-		</ul>
-	</nav>
+<div class="row">
+	<img class="enlarged-image" src="">
+  <div class="col-md-4">
+  	Martie's Malbec
+	<p>
+		Rated 89 points--Whyne Enthusiast
+	</p>
+	<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg">
+		BUY
+	</div>
+	</div>
+  <div class="col-md-4">
+  	Ralf's Riesling
+		<p>
+			Not yet rated--TBD
+		</p>
+		<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg">
+				BUY
+		</div>
+	</div>
+  <div class="col-md-4">
+  	Carlo's Cabernet
+		<p>
+			Rating n/a--What Rating
+		</p>
+
+		<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg">
+			BUY
+		</div>
+	</div>	
 </div>
+
+   <script>
+      $(document).ready(function() {
+        $(".enlarge-image").click(function() {
+          $(".lightbox .enlarged-image").attr("src", $(this).attr("data"));
+          $(".lightbox").show();
+        });
+
+        $(".close").click(function() {
+          $(".lightbox .enlarged-image").attr("src", "");
+          $(".lightbox").hide();
+        });
+      });
+   //  </script>
+
+
+
 </body>
 </html>
