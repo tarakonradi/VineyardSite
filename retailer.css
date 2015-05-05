@@ -53,6 +53,7 @@ p {
 	z-index: 1;
 }
 
+<<<<<<< HEAD
 #logo img {
 	float: left;
 	width: 220px;
@@ -106,6 +107,8 @@ p {
 	width:30px;
 }
 
+=======
+>>>>>>> c1f53a3015928a9a8afe630f467968c4aa88eb5d
 .col-md-4 {
 	text-align: center;
 	font-size: 18pt;
@@ -133,6 +136,7 @@ p {
 	text-align: center;
 	font-size: 30pt;
 	margin-bottom: 15px;
+<<<<<<< HEAD
 }
 
 .row {
@@ -180,7 +184,47 @@ p {
 	font-family: 'Metrophobic', sans-serif;
 	position: absolute;
 	opacity: .9;
+=======
 }
+
+.row {
+	padding: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p {
+	text-align: center;
+	font-size: 12pt;
+	margin-bottom: 15px;
+}
+
+.enlarge-image {
+	background: pink;
+>>>>>>> c1f53a3015928a9a8afe630f467968c4aa88eb5d
+}
+
+.enlarge-image:hover {
+	opacity: .5;
+
+}
+
+.lightbox {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: fixed;
+	z-index: 5;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: .9;
+	background-color: grey;
+}
+
 
 
 
