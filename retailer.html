@@ -1,63 +1,120 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Wine-O's-Vinyard</title>
+
+	<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="retailer.css">
+
+	<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Javascript and JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="scripts/parallax.min.js"></script>
+		<script src="scripts/jq-sticky-anything.min.js"></script>
+
 </head>
 <body>
-	<div id="header">
-		<div id ="logo"> 
-			<a href="index.html"> <img src="#" alt= "Go to Home Page!">
+	<div class="lightbox">
+		
+		<div class="overlay">
+			<a class="close">Close</a>
 		</div>
-			<nav>
-				<ul> 
-				<li>
-					<a href="contactus.html">Contact</a>
+	<img class="enlarged-image" src="">
+	</div>
+	
+		<!-- Mobile nav -->
+		<div class="burger">
+			<img src="pics/menu_burger.png">
+		</div>
 
-				</li>
-				<li>
-					<a href="Retailer.html">Retailer</a>
-				</li>
-				<li>
-					<a href="aboutus.html">About Us</a>
-				</li>
-				<li>
-					<a href="ourcastle.html">Our Castle</a>
-				</li>
+<!-- Header with logo & nav -->
+	<div id="header">
+			<div id ="logo"> 
+				<a href="index.html"> 
+				<img src="pics/logo.png" alt= "Wine-O's!">
+			</div>
+	
+
+		<!-- Main nav -->
+		<div class="menu">
+  		<nav>
+				<ul class="nav"> 
+					<li>
+						<a href="contactus.html">Contact</a>
+					</li>
+					<li>
+						<a href="retailer.html">Find Wine</a>
+					</li>
+					<li>
+						<a href="aboutus.html">About Us</a>
+	        </li>
+					<li>
+						<a href="ourcastle.html">Our Castle</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
 	</div>
-<div class="discover">So you want to try the best thing since spray butter?</div>
 
-<div class="stores">
-	<nav>
-		<ul> 
-			<li>
+
+	<div class= "wineO">
+		So you want to try the best thing since spray butter?
+	</div>
+		
+	<div id="top"></div>
+
+<div class="container">
+
+		<div class="row">
+			<img class="enlarged-image" src="">
+		  <div class="col-md-4">
+		  	<h2>Martie's Malbec</h2>
+			<p>
+				Rated 89 points--Whyne Enthusiast
+			</p>
+			<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg">
+				BUY
+			</div>
+			</div>
+		  <div class="col-md-4">
+		  	<h2>Ralf's Riesling</h2>
 				<p>
-					Martie's Malbec
+					Not yet rated--TBD
 				</p>
+				<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg">
+						BUY
+				</div>
+			</div>
+		  <div class="col-md-4">
+		  	<h2>Carlo's Cabernet</h2>
 				<p>
-					Rated 89 points--	Whyne Enthusiast</p>
-				<a href="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg" target="_blank"> 
+					Rating n/a--What Rating
+				</p>
+
+				<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg">
 					BUY
-				</a>
-			</li>
-			<li>
-				<p>Ralf's Riesling</p>
-				<p>Not yet rated--TBD</p>
-				<a href="https://s-media-cache-ak0.pinimg.com/736x/71/b9/0b/71b90b09848895a4f20a31ff4c89d6ae.jpg" target="_blank"> 
-					BUY
-				</a>
-			</li>
-			<li>
-				<p>Carlo's Cabernet</p>
-				<p>Rating n/a--What Rating</p>
-				<a href="https://s-media-cache-ak0.pinimg.com/736x/90/8b/51/908b51ac084aba76a2c908eff853315d.jpg" target="_blank"> 
-					BUY
-				</a>
-			</li>
-		</ul>
-	</nav>
-</div>
+				</div>
+			</div>	
+		</div>
+
+   <script>
+      $(document).ready(function() {
+        $(".enlarge-image").click(function() {
+          $(".lightbox .enlarged-image").attr("src", $(this).attr("data"));
+          $(".lightbox").show();
+        });
+        $(".close").click(function() {
+          $(".lightbox .enlarged-image").attr("src", "");
+          $(".lightbox").hide();
+        });
+
+      $('#top').parallax({imageSrc: 'pics/catwithwine2.jpg'});
+      });
+   </script>
 </body>
 </html>

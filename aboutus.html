@@ -1,38 +1,63 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vinyard</title>
+	<title>Wine-O's-Vineyard</title>
 		<link rel="stylesheet" type="text/css" href="aboutus.css">
+<!-- 		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="scripts/parallax.min.js"></script>
+		<script src="scripts/jq-sticky-anything.min.js"></script>
 </head>
 <body>
+	<!-- Header with logo & nav -->
 	<div id="header">
-		<div id ="logo"> 
-			<a href="index.html"> <img src="#" alt= "Go to Home Page!">
+			<div id ="logo"> 
+				<a href="index.html"> 
+				<img src="pics/logo.png" alt= "Wine-O's!">
+			</div>
+		<!-- Mobile nav -->
+		<div class="burger">
+			<img src="pics/menu_burger.png">
 		</div>
-			<nav>
-				<ul> 
-				<li>
-					<a href="contactus.html">Contact</a>
 
-				</li>
-				<li>
-					<a href="Retailer.html">Retailer</a>
-				</li>
-				<li>
-					<a href="aboutus.html">About Us</a>
-				</li>
-				<li>
-					<a href="ourcastle.html">Our Castle</a>
-				</li>
+		<!-- Main nav -->
+		<div class="menu">
+  		<nav>
+				<ul class="nav"> 
+					<li>
+						<a href="contactus.html">Contact</a>
+					</li>
+					<li>
+						<a href="retailer.html">Find Wine</a>
+					</li>
+					<li>
+						<a href="aboutus.html">About Us</a>
+	        </li>
+					<li>
+						<a href="ourcastle.html">Our Castle</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
-</div>
-
-	<div class="women">
-		We are two women who know how to pick 'em
 	</div>
 
-	<img src="pics/twowomenpickingwine.jpg">
+		<div id="top-parallax"></div>
+
+	<div class= "wineO">
+		<p>We are two women who know how to pick 'em!</p>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+
+			$('.burger').click(function(){
+	      $('.menu .ul').fadeToggle();
+	  	});
+
+			$('#top-parallax').parallax({imageSrc: 'pics/twowomenpickingwine.jpg'});
+		});
+
+	</script>
 
 </body>
 </html>

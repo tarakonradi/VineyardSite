@@ -1,30 +1,39 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vinyard</title>
+	<title>Wine-O's-Vineyard</title>
 		<link rel="stylesheet" type="text/css" href="ourcastle.css">
+		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="scripts/parallax.min.js"></script>
+		<script src="scripts/jq-sticky-anything.min.js"></script>
 </head>
 <body>
 	<div id="header">
 		<div id ="logo"> 
-			<a href="index.html"> <img src="#" alt= "Go to Home Page!">
+			<a href="index.html"> <img src="pics/logo.png" alt= "Wine-O's!">
 		</div>
-			<nav>
-				<ul> 
-				<li>
-					<a href="contactus.html">Contact</a>
-				</li>
-				<li>
-					<a href="Retailer.html">Retailer</a>
-				</li>
-				<li>
-					<a href="aboutus.html">About Us</a>
-				</li>
-				<li>
-					<a href="ourcastle.html">Our Castle</a>
-				</li>
+
+		<div>
+	  	<nav>
+				<ul class="nav"> 
+					<li>
+						<a href="contactus.html">Contact</a>
+					</li>
+					<li>
+						<a href="retailer.html">Find Wine</a>
+					</li>
+					<li>
+						<a href="aboutus.html">About Us</a>
+	        </li>
+					<li>
+						<a href="ourcastle.html">Our Castle</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
+	</div>
+		<div id="top-parallax-castle"> 
 	</div>
 
 <div class="container">
@@ -37,19 +46,25 @@
 
 	<div class="tour">
 			Come and experience the luxury we get to enjoy day in and day out... You poor unfortunate soul.
-		<img src="pics/insidethecastle.jpg">
 		<p>
-			Our Lovely Dining and Music Room is constantly filled with the likes of Bach and Mozart played by world famous pianist Ian Betterthanew
+			Our Lovely Dining and Music Room is constantly filled with the likes of Bach and Mozart played by world famous pianist Ian Betterthanew.
 		</p>
 		<img src="pics/diningroom.jpg">
 		<p>
-			We serve exquisit meals, of course...for a pretty penny.
-		</p>
-		<img src="pics/bedroom.jpg">
-		<p>
-			This lady has been the only one to afford renting our bedrooms thus far, but we are open to visitors!
+			We serve exquisite meals, of course...for a pretty penny.
 		</p>
 	</div>
 </div>
+<div class="cersi">
+	<p>
+		This lady has been the only one able to afford renting our bedrooms thus far, but we are open to visitors!
+	</p>
+</div>
+
+	<script>
+		$('#top-parallax-castle').parallax({imageSrc: 'pics/insidethecastle.jpg'});
+
+		$('.cersi').parallax({imageSrc: 'pics/bedroom.jpg'});
+	</script>
 </body>
 </html>

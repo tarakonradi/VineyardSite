@@ -1,40 +1,115 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vinyard</title>
+	<title>Wine-O's-Vineyard</title>
+	
+	<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+	
+	<!-- Media query -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Javascript & JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="scripts/parallax.min.js"></script>
+		<script src="scripts/jq-sticky-anything.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<div id ="logo"> 
-			<a href="index.html"> <img src="#" alt= "Go to Home Page!">
+	<!-- Age check pop up -->
+	<div class="agepopup">
+		<div class="overlay"></div>
+		<div class="formbox">
+			<form>
+		  <h2>How old are you?</h2><br><input type="text" id="age"> </br>
+		  <input type="submit" value="LET ME IN!"> 
+			</form>
 		</div>
-			<nav>
-				<ul> 
-				<li>
-					<a href="contactus.html">Contact</a>
+	</div>
+	<!-- End of age check pop up -->
 
-				</li>
-				<li>
-					<a href="Retailer.html">Retailer</a>
-				</li>
-				<li>
-					<a href="aboutus.html">About Us</a>
-				</li>
-				<li>
-					<a href="ourcastle.html">Our Castle</a>
-				</li>
+	<!-- Header with logo & nav -->
+	<div id="header">
+			<div id ="logo"> 
+				<a href="index.html"> 
+				<img src="pics/logo.png" alt= "Wine-O's!">
+			</div>
+		<!-- Mobile nav -->
+		<div class="burger">
+			<img src="pics/menu_burger.png">
+		</div>
+
+		<!-- Main nav -->
+		<div class="menu">
+  		<nav>
+				<ul class="nav"> 
+					<li>
+						<a href="contactus.html">Contact</a>
+					</li>
+					<li>
+						<a href="retailer.html">Find Wine</a>
+					</li>
+					<li>
+						<a href="aboutus.html">About Us</a>
+	        </li>
+					<li>
+						<a href="ourcastle.html">Our Castle</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
-</div>
+	</div>
+	
+<!-- Begin body content -->
+	<div id="top"></div>
+		
+	<div class= "wineO">
+		Wine, oh Wine, would you drink anywhere else?!
+	</div>
 
-<div class= "wineO">
-	Wine, oh Wine, would you drink anywhere else?!
-</div>
+	<div class="subhead">
+		<h4>Our uniquely perfect grapes are organically grown the same way today that they were in the beginning of time.</h4>
+	</div>
 
-<div class= "award">
-	Our Bearded Dragon Wine was Named to the Top 100 Wines in the world for 2012 --Whyne Enthusiast Magazine
-</div>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="pics/handsinwine.jpg">
+		<div class= "award">
+		<p>Our Bearded Dragon Wine was Named to the Top 100 Wines in the world for 2012 --Whyne Enthusiast Magazine</p>
+		</div>
+	</div>
 
+<!-- Return arrow icon -->
+	<div id="back"> 
+		<a href="#top"><img src="pics/topreturnarrow.png"></a>
+	</div>
+
+
+	<script>
+
+		$(document).ready(function(){
+
+			$('.burger').click(function(){
+        $('.menu').fadeToggle();
+    	});
+
+			$('#header').stickThis();
+
+			$('#top').parallax({imageSrc: 'pics/winecastle.jpg'});
+
+			
+
+			$("input[type=submit]").click(function(event){
+	      event.preventDefault();
+			var age=$("input[type=text]").val();
+	    	if (age < 21) {
+					document.location.href = "http://www.welchs.com";
+	    	} else {
+	    		$(".agepopup").fadeOut(1000);
+	    	}
+			});
+
+		});
+	</script>
 </body>
 </html>

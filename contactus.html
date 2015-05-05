@@ -1,38 +1,58 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vinyard</title>
+	<title>Wine-O's-Vineyard</title>
 		<link rel="stylesheet" type="text/css" href="contactus.css">
+		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="scripts/parallax.min.js"></script>
+		<script src="scripts/jq-sticky-anything.min.js"></script>
 </head>
 <body>
+	<div class="agepopup">
+		<form>
+		  How old are you? <input type="text" id="age"> </br>
+		  Let me in! <input type="submit">
+		</form>
+	</div>
 
 	<div id="header">
 		<div id ="logo"> 
-			<a href="index.html"> <img src="#" alt= "Go to Home Page!">
+			<a href="index.html"> <img src="pics/logo.png" alt= "Wine-O's!">
 		</div>
-			<nav>
-				<ul> 
-				<li>
-					<a href="contactus.html">Contact</a>
 
-				</li>
-				<li>
-					<a href="Retailer.html">Retailer</a>
-				</li>
-				<li>
-					<a href="aboutus.html">About Us</a>
-				</li>
-				<li>
-					<a href="ourcastle.html">Our Castle</a>
-				</li>
+		<div>
+	  	<nav>
+				<ul class="nav"> 
+					<li>
+						<a href="contactus.html">Contact</a>
+					</li>
+					<li>
+						<a href="retailer.html">Find Wine</a>
+					</li>
+					<li>
+						<a href="aboutus.html">About Us</a>
+	        </li>
+					<li>
+						<a href="ourcastle.html">Our Castle</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
 	</div>
+		
+	<div id="top-parallax"> 
+	</div>
 
-<div class= "contact">
-	<p>We are located...</p>
-	<p>Somewhere over the rainbow</p>
-</div>
+	<div class= "wineO">
+		<p>We are located...Somewhere over the rainbow</p>
+	</div>
+
+	<div class="footer"></div>
+
+<script>
+$('#top-parallax').parallax({imageSrc: 'pics/winesunset.jpg'});
+</script>
 
 </body>
 </html>
