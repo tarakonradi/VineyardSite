@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vineyard</title>
+	<title>Wine-O's-Vineyard // ABOUT US</title>
+	<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="aboutus.css">
-<!-- 		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'> -->
+
+	<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+	
+	<!-- Media query -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Javascript & JQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="scripts/parallax.min.js"></script>
 		<script src="scripts/jq-sticky-anything.min.js"></script>
 </head>
 <body>
+
+	<!-- Mobile nav -->
+	<img src="pics/menu_burger.png" class="burger">
 	<!-- Header with logo & nav -->
 	<div id="header">
 			<div id ="logo"> 
 				<a href="index.html"> 
 				<img src="pics/logo.png" alt= "Wine-O's!">
 			</div>
-		<!-- Mobile nav -->
-		<div class="burger">
-			<img src="pics/menu_burger.png">
-		</div>
 
 		<!-- Main nav -->
 		<div class="menu">
   		<nav>
-				<ul class="nav"> 
+				<ul>
 					<li>
 						<a href="contactus.html">Contact</a>
 					</li>
@@ -41,20 +48,35 @@
 		</div>
 	</div>
 
-		<div id="top-parallax"></div>
+	<div id="top-parallax"></div>
 
 	<div class= "wineO">
-		<p>We are two women who know how to pick 'em!</p>
+		<h4>We are two women who know how to pick 'em!</h4>
 	</div>
 
-	<script>
-		$(document).ready(function(){
+	<!-- Return arrow icon -->
+	<div id="back"> 
+		<a href="#top"><img src="pics/topreturnarrow_w.png"></a>
+	</div>
+	
 
+	<script>
+
+		$(document).ready(function(){
 			$('.burger').click(function(){
-	      $('.menu .ul').fadeToggle();
-	  	});
+				$('.menu').fadeToggle()
+    	});
+
+			$('#header').stickThis();
 
 			$('#top-parallax').parallax({imageSrc: 'pics/twowomenpickingwine.jpg'});
+
+			$(window).resize(function() {
+      	var w = $(window).width();
+       	if (w > 450) {
+           $('.menu').show();
+     		}
+     	});
 		});
 
 	</script>

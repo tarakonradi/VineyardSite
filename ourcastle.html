@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vineyard</title>
+	<title>Wine-O's-Vineyard // OUR CASTLE</title>
 		<link rel="stylesheet" type="text/css" href="ourcastle.css">
 		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -9,13 +9,19 @@
 		<script src="scripts/jq-sticky-anything.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<div id ="logo"> 
-			<a href="index.html"> <img src="pics/logo.png" alt= "Wine-O's!">
-		</div>
+	<!-- Mobile nav -->
+	<img src="pics/menu_burger.png" class="burger">
 
-		<div>
-	  	<nav>
+	<!-- Header with logo & nav -->
+	<div id="header">
+			<div id ="logo"> 
+				<a href="index.html"> 
+				<img src="pics/logo.png" alt= "Wine-O's!">
+			</div>
+
+		<!-- Main nav -->
+		<div class="menu">
+  		<nav>
 				<ul class="nav"> 
 					<li>
 						<a href="contactus.html">Contact</a>
@@ -33,38 +39,54 @@
 			</nav>
 		</div>
 	</div>
-		<div id="top-parallax-castle"> 
+
+	<!-- Begin body content -->
+	<div id="top-parallax-castle"></div>
+		
+	<div class="wineO"> Imagine a time when wine was safer to drink than water...That time is now.
 	</div>
 
-<div class="container">
-
-	<div class="imagine"> Imagine a time when wine was safer to drink than water...
-	</div>
-	<div class="time">
-		That time is now.
+	<div class="subhead">
+		<h4>Come and experience the luxury we get to enjoy day in and day out... You poor unfortunate soul.</h4>
 	</div>
 
-	<div class="tour">
-			Come and experience the luxury we get to enjoy day in and day out... You poor unfortunate soul.
-		<p>
-			Our Lovely Dining and Music Room is constantly filled with the likes of Bach and Mozart played by world famous pianist Ian Betterthanew.
-		</p>
-		<img src="pics/diningroom.jpg">
-		<p>
-			We serve exquisite meals, of course...for a pretty penny.
-		</p>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="pics/diningroom.jpg">
+		<div class="tour">
+			<p>Our Lovely Dining and Music Room is constantly filled with the likes of Bach and Mozart played by world famous pianist Ian Betterthanew. </br></br> We serve exquisite meals, of course...for a pretty penny.</p>
+		</div>
 	</div>
-</div>
-<div class="cersi">
-	<p>
-		This lady has been the only one able to afford renting our bedrooms thus far, but we are open to visitors!
-	</p>
-</div>
+	<div class="subhead-b">	
+		<h4>This lady has been the only one able to afford renting our bedrooms thus far, but we are open to visitors!</h4>
+	</div>
+	<div class="cersi"></div>
+
+<!-- Return arrow icon -->
+	<div id="back"> 
+		<a href="#top"><img src="pics/topreturnarrow_w.png"></a>
+	</div>
+	
 
 	<script>
-		$('#top-parallax-castle').parallax({imageSrc: 'pics/insidethecastle.jpg'});
 
-		$('.cersi').parallax({imageSrc: 'pics/bedroom.jpg'});
+		$(document).ready(function(){
+			$('.burger').click(function(){
+				$('.menu').fadeToggle()
+    	});
+
+			$('#header').stickThis();
+
+			$('#top-parallax-castle').parallax({imageSrc: 'pics/insidethecastle.jpg'});
+
+			$('.cersi').parallax({imageSrc: 'pics/bedroom.jpg'});
+
+			$(window).resize(function() {
+      	var w = $(window).width();
+       	if (w > 450) {
+           $('.menu').show();
+     		}
+     	});
+		});
+	
 	</script>
 </body>
 </html>

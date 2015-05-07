@@ -1,7 +1,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #e6e6e6;
 }
 
 h2 {
@@ -87,11 +86,7 @@ p {
   	background: transparent;
 }
 
-.burger img{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 35px;
+.burger {
 	display: none;
 }
 
@@ -195,6 +190,7 @@ p {
 			width: 100%;
 			text-align: center;
 			background-color: white;
+			width: 100%;
 
 		}
 
@@ -235,12 +231,14 @@ p {
 			margin-left: 40px;	
 		}
 
-		.burger img{
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			width: 35px;
+		.burger {
+			width: 30px;
+			margin-top: 5px;
+			margin-left: 350px;
+			position: fixed;
+			z-index: 10;
 			display: block;
+			opacity: .6;
 		}
 
 		.wineO {

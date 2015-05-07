@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vineyard</title>
+	<title>Wine-O's-Vineyard // CONTACT US</title>
 		<link rel="stylesheet" type="text/css" href="contactus.css">
 		<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -9,21 +9,20 @@
 		<script src="scripts/jq-sticky-anything.min.js"></script>
 </head>
 <body>
-	<div class="agepopup">
-		<form>
-		  How old are you? <input type="text" id="age"> </br>
-		  Let me in! <input type="submit">
-		</form>
-	</div>
+	<!-- Mobile nav -->
+	<img src="pics/menu_burger.png" class="burger">
 
+	<!-- Header with logo & nav -->
 	<div id="header">
-		<div id ="logo"> 
-			<a href="index.html"> <img src="pics/logo.png" alt= "Wine-O's!">
-		</div>
+			<div id ="logo"> 
+				<a href="index.html"> 
+				<img src="pics/logo.png" alt= "Wine-O's!">
+			</div>
 
-		<div>
-	  	<nav>
-				<ul class="nav"> 
+		<!-- Main nav -->
+		<div class="menu">
+  		<nav>
+				<ul> 
 					<li>
 						<a href="contactus.html">Contact</a>
 					</li>
@@ -41,18 +40,39 @@
 		</div>
 	</div>
 		
-	<div id="top-parallax"> 
+	<div id="top"> 
 	</div>
 
 	<div class= "wineO">
-		<p>We are located...Somewhere over the rainbow</p>
+		<p>We are located...</br>Somewhere over the rainbow</p>
 	</div>
 
 	<div class="footer"></div>
 
-<script>
-$('#top-parallax').parallax({imageSrc: 'pics/winesunset.jpg'});
-</script>
+	<!-- Return arrow icon -->
+	<div id="back"> 
+		<a href="#top"><img src="pics/topreturnarrow.png"></a>
+	</div>
+
+	<script>
+
+		$(document).ready(function(){
+			$('.burger').click(function(){
+				$('.menu').fadeToggle()
+    	});
+
+			$('#header').stickThis();
+
+			$('#top').parallax({imageSrc: 'pics/winesunset.jpg'});
+
+			$(window).resize(function() {
+      	var w = $(window).width();
+       	if (w > 450) {
+           $('.menu').show();
+     		}
+     	});
+		});
+	</script>
 
 </body>
 </html>

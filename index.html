@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vineyard</title>
+	<title>Welcome to Wine-O's-Vineyard!</title>
 	
 	<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -28,7 +28,9 @@
 			</form>
 		</div>
 	</div>
-	<!-- End of age check pop up -->
+
+	<!-- Mobile nav -->
+	<img src="pics/menu_burger.png" class="burger">
 
 	<!-- Header with logo & nav -->
 	<div id="header">
@@ -36,10 +38,6 @@
 				<a href="index.html"> 
 				<img src="pics/logo.png" alt= "Wine-O's!">
 			</div>
-		<!-- Mobile nav -->
-		<div class="burger">
-			<img src="pics/menu_burger.png">
-		</div>
 
 		<!-- Main nav -->
 		<div class="menu">
@@ -88,16 +86,21 @@
 	<script>
 
 		$(document).ready(function(){
-
 			$('.burger').click(function(){
-        $('.menu').fadeToggle();
+				$('.menu').fadeToggle()
     	});
 
 			$('#header').stickThis();
 
 			$('#top').parallax({imageSrc: 'pics/winecastle.jpg'});
 
-			
+			$(window).resize(function() {
+      	var w = $(window).width();
+       	if (w > 450) {
+           $('.menu').show();
+     		}
+     	});
+
 
 			$("input[type=submit]").click(function(event){
 	      event.preventDefault();

@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #800000;
 }
 
 p {
@@ -25,57 +26,10 @@ h3 {
 }
 
 h4 {	
-	font-size: 18px;
+	font-size: 24px;
 	text-align: center;
 	font-family: 'Metrophobic', sans-serif;
-	color: #800000;
-}
-
-input[type="text"] {
-  background-color: white;
-  padding:10px;
-  border: 2px solid #800000;
-}
-
-input[type="submit"] {
-  background-color: #800000;
-  padding:15px;
-  border: 2px solid white;
-  font-size: 24px;
-  color: white;
-  margin-top:30px;
-  border-radius: 8px;
-}
-
-.agepopup {
-	width:100%;
-	height:100%;
-	position: fixed;
-	z-index: 1;	
-	display: none;
-	}
-
-.overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: #333;
-	opacity: .9;
-}
-	
-.formbox {
-	width: 350px;
-	margin: 0 auto;
-	margin-top: 150px;
-	margin-bottom: 100px;
-	padding: 25px;
-	background-color: white;
-	border: 2px solid #800000;
-	border-radius: 8px;
-	text-align: center;
-	box-shadow: 5px 5px 5px;
-	position: relative;
-	z-index: 5;
+	color: white;
 }
 
 #header li {
@@ -144,29 +98,27 @@ input[type="submit"] {
 .subhead {
 	width: 100%;
 	padding: 15px;
-/*	background-color: #800000;
-*/	position: relative;
-	margin-top: -50px;
-	opacity: .8;
+	background-color: #800000;
+	position: relative;
 	color: #800000;
 }
 
-#middle {
+.subhead-b {
 	width: 100%;
-	height: 800px;
-	position: relative;
-	top: -100px;		
-	min-height: 400px;
-	background: transparent;
+	padding: 15px;
+	background-color: #800000;
 }
 
 .parallax-window {
-	height: 700px;
-  background: transparent;
+	width: 100%;
+	height: 600px;
+	position: relative;	
+	background: transparent;
 }
 
 .wineO {
-	margin-top: -130px;
+	width: 550px;
+	margin-top: -180px;
 	margin:-left:30px;
 	float: right;
 	padding-right: 50px;
@@ -175,7 +127,21 @@ input[type="submit"] {
 	font-family: 'Metrophobic', sans-serif;
 	position: relative;
 	opacity: .9;
+	text-align: right;
 }
+
+.tour p {
+	width: 400px;
+	margin-top: 75px;
+	text-align: right;
+	float: right;
+	padding-right: 50px;
+	color: white;
+	font-size: 24px;
+	font-family: 'Metrophobic', sans-serif;
+	opacity: .9;
+	text-shadow: 2px 2px 2px #333;
+} 
 
 .award {
 	margin-top: 620px;
@@ -187,11 +153,7 @@ input[type="submit"] {
 
 }
 
-.burger img{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 35px;
+.burger {
 	display: none;
 }
 
@@ -206,53 +168,11 @@ input[type="submit"] {
 	width:30px;
 }
 
-/*castle*/
-
-#top-parallax-castle {
-	width: 100%;		
-	height: 700px;
-	background: transparent;
-}
-
-.cersi {
-	width: 100%;		
-	height: 700px;
-	background: transparent;
-}
-
-/*contact*/
-
 #top-parallax {
 	width: 100%;		
 	height: 700px;
 	background: transparent;
-	top: 0px;
 }
-
-.contact {
-	background-color: #800000;
-	width: 100%;
-	height: 300px;
-	margin-top: -35px;
-	font-size: 24pt;
-	text-align: center;
-}
-
-/*retailer*/
-
-.stores li {
-	list-style-type: none;
-	float: left;
-	margin-right: 80px;
-}
-
-.stores a {
-	border: solid;
-	padding: 11px;
-	margin-left: 20px;
-}
-
-
 
 
 @media all and (max-width: 450px) {
@@ -293,6 +213,7 @@ input[type="submit"] {
 			float: left;
 			width: 100%;
 			margin: 0;
+			margin-top: -20px;
 			height: 102px;	
 			padding-top: 5px;
 			position: absolute;
@@ -306,24 +227,24 @@ input[type="submit"] {
 			margin-left: 40px;	
 		}
 
-		.burger img{
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			width: 35px;
+
+		.burger {
+			width: 30px;
+			margin-top: 5px;
+			margin-left: 350px;
+			position: fixed;
+			z-index: 10;
 			display: block;
+			opacity: .6;
+		}
+		.menu {
+			display:none;
 		}
 
 		.wineO {
-			margin-top: -130px;
-			margin:-left:30px;
-			float: right;
-			padding-right: 50px;
-			color: white;
-			font-size: 30px;
-			font-family: 'Metrophobic', sans-serif;
-			position: relative;
-			opacity: .9;
+			margin-top: -180px;
+			width: 350px;
+			padding-right: 20px;
 		}
 
 		.award {

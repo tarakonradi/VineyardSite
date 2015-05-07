@@ -4,7 +4,7 @@ body {
 }
 
 p {
-	font-size: 16px;
+	font-size: 24px;
 	text-align: right;
 	font-family: 'Metrophobic', sans-serif;
 	color: #FFF;
@@ -45,37 +45,6 @@ input[type="submit"] {
   color: white;
   margin-top:30px;
   border-radius: 8px;
-}
-
-.agepopup {
-	width:100%;
-	height:100%;
-	position: fixed;
-	z-index: 1;	
-	display: none;
-	}
-
-.overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: #333;
-	opacity: .9;
-}
-	
-.formbox {
-	width: 350px;
-	margin: 0 auto;
-	margin-top: 150px;
-	margin-bottom: 100px;
-	padding: 25px;
-	background-color: white;
-	border: 2px solid #800000;
-	border-radius: 8px;
-	text-align: center;
-	box-shadow: 5px 5px 5px;
-	position: relative;
-	z-index: 5;
 }
 
 #header li {
@@ -166,7 +135,7 @@ input[type="submit"] {
 }
 
 .wineO {
-	margin-top: -130px;
+	margin-top: -300px;
 	margin:-left:30px;
 	float: right;
 	padding-right: 50px;
@@ -187,11 +156,7 @@ input[type="submit"] {
 
 }
 
-.burger img{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 35px;
+.burger {
 	display: none;
 }
 
@@ -254,7 +219,6 @@ input[type="submit"] {
 
 
 
-
 @media all and (max-width: 450px) {
 
 		#header li {
@@ -293,6 +257,7 @@ input[type="submit"] {
 			float: left;
 			width: 100%;
 			margin: 0;
+			margin-top: -20px;
 			height: 102px;	
 			padding-top: 5px;
 			position: absolute;
@@ -306,19 +271,25 @@ input[type="submit"] {
 			margin-left: 40px;	
 		}
 
-		.burger img{
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			width: 35px;
+
+		.burger {
+			width: 30px;
+			margin-top: 5px;
+			margin-left: 350px;
+			position: fixed;
+			z-index: 10;
 			display: block;
+			opacity: .6;
+		}
+		.menu {
+			display:none;
 		}
 
 		.wineO {
-			margin-top: -130px;
-			margin:-left:30px;
+			margin-top: -580px;
+			width: 350px;
 			float: right;
-			padding-right: 50px;
+			padding-right: 20px;
 			color: white;
 			font-size: 30px;
 			font-family: 'Metrophobic', sans-serif;

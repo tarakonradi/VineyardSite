@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Wine-O's-Vinyard</title>
+	<title>Wine-O's-Vineyard // BUY WINE!</title>
 
 	<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="retailer.css">
@@ -14,6 +14,7 @@
 
 	<!-- Javascript and JQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 		<script src="scripts/parallax.min.js"></script>
 		<script src="scripts/jq-sticky-anything.min.js"></script>
 
@@ -27,23 +28,20 @@
 	<img class="enlarged-image" src="">
 	</div>
 	
-		<!-- Mobile nav -->
-		<div class="burger">
-			<img src="pics/menu_burger.png">
-		</div>
+<!-- Mobile nav -->
+	<img src="pics/menu_burger.png" class="burger">
 
-<!-- Header with logo & nav -->
+	<!-- Header with logo & nav -->
 	<div id="header">
 			<div id ="logo"> 
 				<a href="index.html"> 
 				<img src="pics/logo.png" alt= "Wine-O's!">
 			</div>
-	
 
 		<!-- Main nav -->
 		<div class="menu">
   		<nav>
-				<ul class="nav"> 
+				<ul> 
 					<li>
 						<a href="contactus.html">Contact</a>
 					</li>
@@ -86,7 +84,7 @@
 				<p>
 					Not yet rated--TBD
 				</p>
-				<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg">
+				<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/474x/90/8b/51/908b51ac084aba76a2c908eff853315d.jpg">
 						BUY
 				</div>
 			</div>
@@ -96,11 +94,17 @@
 					Rating n/a--What Rating
 				</p>
 
-				<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/bf/f1/9a/bff19a2ec57e548e07a050235220cd8c.jpg">
+				<div class="enlarge-image" data="https://s-media-cache-ak0.pinimg.com/236x/8e/41/2c/8e412cca5b169866de3a203f239ed1b5.jpg">
 					BUY
 				</div>
 			</div>	
 		</div>
+
+	<!-- Return arrow icon -->
+	<div id="back"> 
+		<a href="#top"><img src="pics/topreturnarrow.png"></a>
+	</div>
+	
 
    <script>
       $(document).ready(function() {
@@ -113,7 +117,22 @@
           $(".lightbox").hide();
         });
 
-      $('#top').parallax({imageSrc: 'pics/catwithwine2.jpg'});
+	      $('#top').parallax({imageSrc: 'pics/catwithwine2.jpg'});
+
+				$('.burger').click(function(){
+					$('.menu').fadeToggle()
+	    	});
+
+				$('#header').stickThis();
+
+				$('#top').parallax({imageSrc: 'pics/winesunset.jpg'});
+
+				$(window).resize(function() {
+	      	var w = $(window).width();
+	       	if (w > 450) {
+	           $('.menu').show();
+	     		}
+	     	});
       });
    </script>
 </body>
